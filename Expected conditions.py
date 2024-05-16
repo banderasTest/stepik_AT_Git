@@ -24,7 +24,7 @@ import math
     input1 = browser.find_element(By.ID, 'answer')
     input1.send_keys(y)
 
-    # говорим Selenium проверять в течение 5 секунд, пока кнопка не станет кликабельной1
+    # говорим Selenium проверять в течение 5 секунд, пока кнопка не станет кликабельной
     button = WebDriverWait(browser, 5).until(
         EC.element_to_be_clickable((By.ID, "solve"))
     )
