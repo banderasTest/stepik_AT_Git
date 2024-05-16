@@ -39,7 +39,7 @@ try:
 finally:
     # выводим результат выполнения задания на консоль
     print(browser.switch_to.alert.text)
-	# или так
+    # или так
     print(browser.switch_to.alert.text.split(': ')[-1])
     # ожидание чтобы визуально оценить результаты прохождения скрипта
     # time.sleep(3)
