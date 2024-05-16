@@ -37,7 +37,7 @@ try:
 
 
 finally:
-    # выводим результат выполнения задания на консоль
+    # выводим результат выполнения задания на консоль1
     print(browser.switch_to.alert.text)
     # или так
     print(browser.switch_to.alert.text.split(': ')[-1])
