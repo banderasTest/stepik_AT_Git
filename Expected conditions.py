@@ -1,4 +1,4 @@
-from selenium.webdriver.common.by import By
+п»їfrom selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
@@ -10,13 +10,13 @@ import math
     browser.get("http://suninjuly.github.io/explicit_wait2.html")
     browser = webdriver.Chrome()
     
-    # говорим Selenium проверять в течение 15 секунд, пока цена объекта не станет равной $100
+    # РіРѕРІРѕСЂРёРј Selenium РїСЂРѕРІРµСЂСЏС‚СЊ РІ С‚РµС‡РµРЅРёРµ 15 СЃРµРєСѓРЅРґ, РїРѕРєР° С†РµРЅР° РѕР±СЉРµРєС‚Р° РЅРµ СЃС‚Р°РЅРµС‚ СЂР°РІРЅРѕР№ $100
     price = WebDriverWait(browser, 15).until(
         EC.text_to_be_present_in_element((By.ID, "price"),"$100")
     )
     button = browser.find_element(By.ID, "book").click()
 
-    # находим элемент, содержащий текст
+    # РЅР°С…РѕРґРёРј СЌР»РµРјРµРЅС‚, СЃРѕРґРµСЂР¶Р°С‰РёР№ С‚РµРєСЃС‚
     x_element = browser.find_element(By.ID, 'input_value')
     x = x_element.text
     y = calc(x)
@@ -24,7 +24,7 @@ import math
     input1 = browser.find_element(By.ID, 'answer')
     input1.send_keys(y)
 
-    # говорим Selenium проверять в течение 5 секунд, пока кнопка не станет кликабельной 5
+    # РіРѕРІРѕСЂРёРј Selenium РїСЂРѕРІРµСЂСЏС‚СЊ РІ С‚РµС‡РµРЅРёРµ 5 СЃРµРєСѓРЅРґ, РїРѕРєР° РєРЅРѕРїРєР° РЅРµ СЃС‚Р°РЅРµС‚ РєР»РёРєР°Р±РµР»СЊРЅРѕР№ 6
     button = WebDriverWait(browser, 5).until(
         EC.element_to_be_clickable((By.ID, "solve"))
     )
