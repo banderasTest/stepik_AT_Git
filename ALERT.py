@@ -1,4 +1,4 @@
-from selenium import webdriver
+п»їfrom selenium import webdriver
 browser = webdriver.Chrome()
 from selenium.webdriver.common.by import By
 import time
@@ -13,16 +13,16 @@ try:
     browser = webdriver.Chrome()
     browser.get(link)
 
-    # нажимаем кнопку-алерт
+    # РЅР°Р¶РёРјР°РµРј РєРЅРѕРїРєСѓ-Р°Р»РµСЂС‚
     button = browser.find_element(By.CSS_SELECTOR, "button.btn-primary").click()
     time.sleep(1)
 
-    # принимаем кнопку конфирм
+    # РїСЂРёРЅРёРјР°РµРј РєРЅРѕРїРєСѓ РєРѕРЅС„РёСЂРј
     confirm = browser.switch_to.alert
     confirm.accept()
     time.sleep(1)
 
-    # находим элемент, содержащий текст
+    # РЅР°С…РѕРґРёРј СЌР»РµРјРµРЅС‚, СЃРѕРґРµСЂР¶Р°С‰РёР№ С‚РµРєСЃС‚
     x_element = browser.find_element(By.ID, 'input_value')
     x = x_element.text
     y = calc(x)
@@ -37,11 +37,11 @@ try:
 
 
 finally:
-    # выводим результат выполнения задания на консоль
+    # РІС‹РІРѕРґРёРј СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РґР°РЅРёСЏ РЅР° РєРѕРЅСЃРѕР»СЊ
     print(browser.switch_to.alert.text)
-	# или так
+	# РёР»Рё С‚Р°Рє
     print(browser.switch_to.alert.text.split(': ')[-1])
-    # ожидание чтобы визуально оценить результаты прохождения скрипта
+    # РѕР¶РёРґР°РЅРёРµ С‡С‚РѕР±С‹ РІРёР·СѓР°Р»СЊРЅРѕ РѕС†РµРЅРёС‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚С‹ РїСЂРѕС…РѕР¶РґРµРЅРёСЏ СЃРєСЂРёРїС‚Р°
     # time.sleep(3)
-    # закрываем браузер после всех манипуляций
+    # Р·Р°РєСЂС‹РІР°РµРј Р±СЂР°СѓР·РµСЂ РїРѕСЃР»Рµ РІСЃРµС… РјР°РЅРёРїСѓР»СЏС†РёР№
     browser.quit()
